@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
+import Projects from './Projects';
 
 class App extends Component {
 
-	constructor() {
-		super();
-		this.state = { displayBio: false };
-		this.toggleDisplayBio = this.toggleDisplayBio.bind(this);
+	state = { displayBio: false };
 
-	}
-
-	toggleDisplayBio() {
+	toggleDisplayBio = () => {
 		this.setState( {displayBio: !this.state.displayBio} );
 	}
 
@@ -29,8 +25,10 @@ class App extends Component {
 				<p> My name is Rutul. I'm a software engineer </p>
 				<p> I am always looking forward to working on meaningful projects.</p>
 				{bio}
+			<Projects />
+			<hr />
 			</div>
-		)
+		);
 	}
 }
 
